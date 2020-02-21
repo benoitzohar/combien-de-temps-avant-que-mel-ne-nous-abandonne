@@ -22,9 +22,9 @@ function getTimeLeft() {
     hours * 60 * 60 -
     minutes * 60;
 
-  return `${weeks} semaine${weeks > 1 && "s"}, ${days} jour${days > 1 &&
-    "s"}, ${hours} heure${hours > 1 && "s"}, ${minutes} minute${minutes > 1 &&
-    "s"} et ${seconds} seconde${seconds > 1 && "s"}`;
+  return `${weeks} semaine${weeks > 1 ? "s" : ""}, ${days} jour${days > 1 &&
+    "s"}, ${hours} heure${hours > 1 ? "s" : ""}, ${minutes} minute${minutes >
+    1 && "s"} et ${seconds} seconde${seconds > 1 ? "s" : ""}`;
 }
 
 function App() {
