@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import moment from "moment";
+
+const COLORS = {
+  BLUE: "#3AA3F7",
+  ORANGE: "#f58442",
+  GREEN: "#479A5F",
+  RED: "#A61006"
+};
 
 function App() {
+  const time = "X semaines";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Il nous reste {time} avant que Mel ne nous abandonne</h1>
+      <h2>Dépêchez vous de lui faire des câlins!</h2>
+      <h2>❤️</h2>
     </div>
   );
 }
