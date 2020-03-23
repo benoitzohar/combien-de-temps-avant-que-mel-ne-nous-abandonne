@@ -32,15 +32,17 @@ function App() {
   const [time, setTime] = useState(getTimeLeft());
 
   useEffect(() => {
-    setInterval(() => {
+    const t = setTimeout(() => {
       setColorKey(colorKey === COLORS.length - 1 ? 0 : colorKey + 1);
     }, 2000);
-  });
+    return () => clearInterval(t);
+  }, [colorKey]);
+
   useEffect(() => {
     setInterval(() => {
       setTime(getTimeLeft());
     }, 1000);
-  });
+  }, []);
 
   return (
     <div className="App" style={{ backgroundColor: COLORS[colorKey] }}>
