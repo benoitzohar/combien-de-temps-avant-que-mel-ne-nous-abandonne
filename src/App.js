@@ -47,7 +47,7 @@ function App() {
   return (
     <div className="App" style={{ backgroundColor: COLORS[colorKey] }}>
       <h1>Il nous reste {time} avant que Mel ne nous abandonne...</h1>
-      <h2>Dépêchez-vous de lui faire des câlins! (enfin pas de trop prêt non plus hein, on est en pleine quarantaine là 😉)</h2>
+      <h2>Dépêchez-vous de lui faire des câlins!</h2>
       <h1>❤️</h1>
     </div>
   );
