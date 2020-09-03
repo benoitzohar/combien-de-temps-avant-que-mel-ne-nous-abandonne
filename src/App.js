@@ -48,7 +48,7 @@ function App() {
     <div className="App" style={{ backgroundColor: COLORS[colorKey] }}>
       <h1>Il nous reste {time} avant que Mel ne nous abandonne...</h1>
       <h2>Dépêchez-vous de lui faire des câlins!</h2>
-      <h1>❤️</h1>
+      <h1><span role="img" aria-label="heart">❤️</span></h1>
     </div>
   );
 }
