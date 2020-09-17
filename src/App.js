@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import moment from "moment";
 
 const COLORS = ["#3AA3F7", "#f58442", "#479A5F", "#A61006"];
 
-const LEAVE_DATE = moment("2020-09-10 21:00:00");
+//const LEAVE_DATE = moment("2020-09-10 21:00:00");
 
-function getTimeLeft() {
+/* function getTimeLeft() {
   const now = moment();
   const weeks = LEAVE_DATE.diff(now, "weeks");
   const days = LEAVE_DATE.diff(now, "days") - weeks * 7;
@@ -25,11 +24,11 @@ function getTimeLeft() {
   return `${days} jour${days > 1 ?
     "s" : ""}, ${hours} heure${hours > 1 ? "s" : ""}, ${minutes} minute${minutes >
     1 ? "s" : ""} et ${seconds} seconde${seconds > 1 ? "s" : ""}`;
-}
+} */
 
 function App() {
   const [colorKey, setColorKey] = useState(0);
-  const [time, setTime] = useState(getTimeLeft());
+  //const [time, setTime] = useState(getTimeLeft());
 
   useEffect(() => {
     const t = setTimeout(() => {
@@ -38,16 +37,15 @@ function App() {
     return () => clearInterval(t);
   }, [colorKey]);
 
-  useEffect(() => {
+  /* useEffect(() => {
     setInterval(() => {
       setTime(getTimeLeft());
     }, 1000);
-  }, []);
+  }, []); */
 
   return (
     <div className="App" style={{ backgroundColor: COLORS[colorKey] }}>
-      <h1>Il nous reste {time} avant que Mel ne nous abandonne...</h1>
-      <h2>Dépêchez-vous de lui faire des câlins!</h2>
+      <h1>Tu reviens quand?</h1>
       <h1><span role="img" aria-label="heart">❤️</span></h1>
     </div>
   );
