@@ -45,8 +45,18 @@ function App() {
 
   return (
     <div className="App" style={{ backgroundColor: COLORS[colorKey] }}>
-      <h1>Tu reviens quand?</h1>
-      <h1><span role="img" aria-label="heart">❤️</span></h1>
+      <h1>ELLE EST LÀÀÀÀ!!!!</h1>
+      <h1>
+        <span role="img" aria-label="heart">
+          ❤️
+        </span>
+        <span role="img" aria-label="heart">
+          ❤️
+        </span>
+        <span role="img" aria-label="heart">
+          ❤️
+        </span>
+      </h1>
     </div>
   );
 }
